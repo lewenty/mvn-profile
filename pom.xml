@@ -16,6 +16,10 @@
             <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>env</name>
+                    <value>Test</value>
+                </property>
             </activation>
             <build>
                 <resources>
@@ -27,6 +31,12 @@
         </profile>
         <profile>
             <id>prep</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>Prep</value>
+                </property>
+            </activation>
             <build>
                 <resources>
                     <resource>
@@ -37,6 +47,12 @@
         </profile>
         <profile>
             <id>prod</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>Prod</value>
+                </property>
+            </activation>
             <build>
                 <resources>
                     <resource>
@@ -46,7 +62,6 @@
             </build>
         </profile>
     </profiles>
-
 
 
     <dependencies>
